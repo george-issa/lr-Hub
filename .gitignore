@@ -1,0 +1,21 @@
+# Simulation output data
+data/
+*.npz
+
+# Large PDF plots
+results/*.pdf
+docs/
+
+# Julia artifacts
+*.jl-e
+Manifest.toml
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Notebook outputs — clear manually or use nbstripout before committing
