@@ -1,4 +1,5 @@
 # analysis package — import the main extraction API directly
+from .config import PROJECT_ROOT, DATA_DIR, RESULTS_DIR
 from .extract import (
     SimParams,
     get_data_dir,
@@ -9,6 +10,9 @@ from .extract import (
 )
 
 __all__ = [
+    "PROJECT_ROOT",
+    "DATA_DIR",
+    "RESULTS_DIR",
     "SimParams",
     "get_data_dir",
     "extract_equal_time",

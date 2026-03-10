@@ -59,11 +59,11 @@ def get_data_dir(params: SimParams, base: Optional[str] = None) -> str:
 
     Tries candidate directory names in this order:
       1. New unified format:
-           hubbard_U{U:.2f}_mu{mu:.2f}_b{beta:.2f}_L{L}_a{alpha:.2f}_Rmax{Rmax}-{sID}
+           hubbard_U{U:.2f}_m{mu:.2f}_b{beta:.2f}_L{L}_a{alpha:.2f}_Rmax{Rmax}-{sID}
       2. Legacy LR format (old hubbard_chain_LR.jl):
            hubbard_chain_LR_U{U:.2f}_m{mu:.2f}_b{beta:.2f}_L{L}_a{alpha:.2f}_Rmax{Rmax}-{sID}
       3. Legacy NN format (old hubbard_chain.jl):
-           hubbard_chain_U{U:.2f}_mu{mu:.2f}_L{L}_b{beta:.2f}-{sID}
+           hubbard_chain_U{U:.2f}_m{mu:.2f}_L{L}_b{beta:.2f}-{sID}
 
     Raises FileNotFoundError if none of the candidates exist.
     """
@@ -78,7 +78,7 @@ def get_data_dir(params: SimParams, base: Optional[str] = None) -> str:
         (f"hubbard_chain_LR_U{p.U:.2f}_m{p.mu:.2f}_b{p.beta:.2f}_L{p.L}"
          f"_a{p.alpha:.2f}_Rmax{p.Rmax}-{p.sID}"),
         # legacy NN format
-        (f"hubbard_chain_U{p.U:.2f}_mu{p.mu:.2f}_L{p.L}_b{p.beta:.2f}-{p.sID}"),
+        (f"hubbard_chain_U{p.U:.2f}_m{p.mu:.2f}_L{p.L}_b{p.beta:.2f}-{p.sID}"),
     ]
 
     for name in candidates:

@@ -5,6 +5,7 @@ data/
 # Large PDF plots
 results/*.pdf
 docs/
+*.pdf
 
 # Julia artifacts
 *.jl-e
@@ -19,3 +20,8 @@ __pycache__/
 .DS_Store
 
 # Notebook outputs — clear manually or use nbstripout before committing
+
+# (plan) md & txt files
+PLAN.md
+results*.md
+*.txt
